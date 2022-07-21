@@ -53,6 +53,12 @@ def trigger(event_name, threaded=True, max_threads=None):
     EventManager.threads = []
 
 
+def clear_events():
+    """clears all events on the stack"""
+
+    EventManager.events = []
+
+
 def _start_thread(thread, max_threads=None):
     """starts a given thread using thread.start()"""
 
